@@ -1,0 +1,23 @@
+ load_balancers:
+   LB1:
+     enabled: true
+     vnet_key: "vnet1"
+     subnet_key: "subnet4"
+     name: "SCALB01"    
+     resource_group_key: "virtualMachineTest"
+     lb_sku: "Standard"
+     frontendipconfigname: "MOUSER-SCUS-IB-PREPROD-SCALBIP"
+     private_ip_address_allocation: "Static"
+     private_ip_address: "10.155.183.20"
+     backend_address_pool_name : "SCUSIBBPSCAR1"
+     healthprobename: "mssql-probe"
+     intervalseconds: "5"
+     healthprobeport: "1433"
+     healthprobeprotocol: "Tcp"
+     lbrulename: "scusibpreprodlbrule"
+     lbruleprotocol: "Tcp"
+     frontendport: "1433"
+     backendport: "1433"
+     vmips:
+       vma4: "vma4"
+        vma5: "vma5"
